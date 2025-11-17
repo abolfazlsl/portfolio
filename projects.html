@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="fa" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Projects</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        display: ["CalSans", "ui-sans-serif", "system-ui"],
+                    },
+                    animation: {
+                        "fade-in": "fade-in 1.6s ease-in-out forwards",
+                        "fade-up": "fade-up 0.8s ease-out forwards",
+                    },
+                    keyframes: {
+                        "fade-in": {
+                            "0%": { opacity: "0%" },
+                            "100%": { opacity: "100%" },
+                        },
+                        "fade-up": {
+                            "0%": { transform: "translateY(12px)", opacity: "0%" },
+                            "100%": { transform: "translateY(0)", opacity: "100%" },
+                        },
+                    },
+                },
+            },
+        };
+    </script>
+
+
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body class="bg-black">
+    <div class="relative pb-16 min-h-screen bg-gradient-to-tl from-black via-zinc-900 to-black">
+        <!-- Header -->
+        <header class="fixed inset-x-0 top-0 z-50 backdrop-blur border-b border-zinc-800/30">
+            <div class="container mx-auto flex items-center justify-between p-6">
+                <a href="./index.html" class="text-zinc-300 hover:text-white duration-200">← Home</a>
+                <nav class="flex gap-8">
+                    <span class="text-zinc-200">Projects</span>
+                    <a href="./contact.html" class="text-zinc-400 hover:text-zinc-100 duration-200">Contact</a>
+                    <a href="./skills.html" class="text-zinc-400 hover:text-zinc-100 duration-200">Skills</a>
+                    <a href="./about.html" class="text-zinc-400 hover:text-zinc-100 duration-200">About</a>
+                </nav>
+            </div>
+        </header>
+
+
+        <!-- Content -->
+        <main class="px-6 pt-24 mx-auto space-y-8 max-w-7xl lg:px-8 md:space-y-16 md:pt-28 lg:pt-36">
+            <div class="max-w-2xl mx-auto lg:mx-0 opacity-0 animate-fade-up [animation-fill-mode:both]">
+                <h2 class="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl font-display">Projects</h2>
+                <p class="mt-4 text-zinc-400">
+                    A few GitHub projects with short descriptions.
+                </p>
+            </div>
+
+            <div
+                class="w-full h-px bg-zinc-800 opacity-0 animate-fade-in [animation-delay:150ms] [animation-fill-mode:both]">
+            </div>
+
+            <!-- Grid -->
+            <section id="projects-grid"
+                class="grid grid-cols-1 gap-8 mx-auto lg:grid-cols-2 opacity-0 animate-fade-in [animation-delay:300ms] [animation-fill-mode:both]">
+                <!-- Cards rendered by JS -->
+            </section>
+
+            <div
+                class="hidden w-full h-px md:block bg-zinc-800 opacity-0 animate-fade-in [animation-delay:450ms] [animation-fill-mode:both]">
+            </div>
+        </main>
+    </div>
+
+    <script src="./js/projects.js" defer></script>
+</body>
+
+</html>
