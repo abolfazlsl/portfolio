@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="fa" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>About</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        display: ["CalSans", "ui-sans-serif", "system-ui"],
+                    },
+                    animation: {
+                        "fade-in": "fade-in 1.6s ease-in-out forwards",
+                        "fade-up": "fade-up 0.9s ease-out forwards",
+                    },
+                    keyframes: {
+                        "fade-in": { "0%": { opacity: "0%" }, "100%": { opacity: "100%" } },
+                        "fade-up": {
+                            "0%": { transform: "translateY(12px)", opacity: "0%" },
+                            "100%": { transform: "translateY(0)", opacity: "100%" },
+                        },
+                    },
+                },
+            },
+        };
+    </script>
+
+   
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body class="bg-black overflow-x-hidden">
+    <div class="relative min-h-screen overflow-hidden bg-gradient-to-tl from-black/85 via-zinc-900/90 to-black/85">
+        <!-- Background image, heavily blurred -->
+        <div class="absolute inset-0 z-0 pointer-events-none" aria-hidden="true">
+            <img
+                src="./images/_996.png"
+                alt=""
+                class="w-full h-full object-cover blur-sm opacity-[0.17]"
+            />
+        </div>
+        <!-- Header -->
+        <header class="fixed inset-x-0 top-0 z-50 backdrop-blur border-b border-zinc-800/30">
+            <div class="container mx-auto flex items-center justify-between p-6">
+                <a href="./index.html" class="text-zinc-300 hover:text-white duration-200">← Home</a>
+                <nav class="flex gap-8">
+                    <a href="./projects.html" class="text-zinc-400 hover:text-zinc-100 duration-200">Projects</a>
+                    <a href="./contact.html" class="text-zinc-400 hover:text-zinc-100 duration-200">Contact</a>
+                    <a href="./skills.html" class="text-zinc-400 hover:text-zinc-100 duration-200">Skills</a>
+                    <span class="text-zinc-200">About</span>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Content -->
+        <main class="px-6 pt-24 mx-auto space-y-8 max-w-3xl lg:px-8 md:space-y-12 md:pt-28 lg:pt-36">
+            <section class="opacity-0 animate-fade-up [animation-fill-mode:both]">
+                <h1 class="text-4xl font-bold tracking-tight text-zinc-100 sm:text-5xl font-display">About Me</h1>
+                <p class="mt-6 text-zinc-300 leading-8">
+                    Backend Developer with over one year of professional experience in web development, specializing in
+                    PHP and the Laravel
+                    framework. Proficient in designing scalable APIs, databases (MySQL, MongoDB, Redis), and modern
+                    tools like MinIO and n8n for system integration.
+                </p>
+                <p class="mt-4 text-zinc-400 leading-7">
+                    Experienced in developing WordPress plugins for product synchronization and refactoring systems with
+                    microservices architecture. Graduated from
+                    specialized web development courses at Tehran Technical Complex (20192020), skilled in both team and
+                    independent work on complex projects. Eager
+                    to contribute to innovative projects for professional growth and value creation.
+                </p>
+            </section>
+
+            <div
+                class="w-full h-px bg-zinc-800 opacity-0 animate-fade-in [animation-delay:200ms] [animation-fill-mode:both]">
+            </div>
+
+            <section
+                class="grid grid-cols-1 gap-6 md:grid-cols-2 opacity-0 animate-fade-in [animation-delay:300ms] [animation-fill-mode:both]">
+                <article
+                    class="p-6 border rounded-xl border-zinc-700/70 hover:border-zinc-500/70 duration-300 hover:bg-zinc-800/10">
+                    <h3 class="text-xl font-bold text-zinc-100 font-display">KEY ACHIEVEMENTS   </h3>
+                    <ul class="mt-4 text-zinc-300 leading-7 list-disc list-inside">
+                        <li>Sales Growth Campaigns</li>
+                        <li>Seamless Product Sync</li>
+                        <li>Enhanced Order Processing</li>
+                        <li>Efficient Support System</li>
+                    </ul>
+                </article>
+
+                <article
+                    class="p-6 border rounded-xl border-zinc-700/70 hover:border-zinc-500/70 duration-300 hover:bg-zinc-800/10">
+                    <h3 class="text-xl font-bold text-zinc-100 font-display">EDUCATION & COURSES</h3>
+                    <ul class="mt-4 text-zinc-300 leading-7">
+                        <li>
+                            <a href="https://www.mftsk.com/"
+                                class="underline underline-offset-4 hover:text-zinc-100">Web1 Course</a>
+                        </li>
+                        <li>
+                            <a href="https://www.mftsk.com/"
+                                class="underline underline-offset-4 hover:text-zinc-100">Web3 Course</a>
+                        </li>
+                        <li>
+                            <a href="https://www.mftsk.com/" target="_blank"
+                                class="underline underline-offset-4 hover:text-zinc-100">PHP Course</a>
+                        </li> 
+                        <li>
+                            <a href="https://daneshkar.net/" target="_blank"
+                                class="underline underline-offset-4 hover:text-zinc-100">Pthone BootCamp</a>
+                        </li>
+                    </ul>
+                </article>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
