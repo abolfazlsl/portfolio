@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="fa" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Portfolio</title>
+
+    <!-- Tailwind via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Tailwind config to match project animations and font-display
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        display: ["CalSans", "ui-sans-serif", "system-ui"],
+                    },
+                    animation: {
+                        "fade-in": "fade-in 3s ease-in-out forwards",
+                        title: "title 2.6s ease-out forwards",
+                        "fade-left": "fade-left 2.2s ease-in-out forwards",
+                        "fade-right": "fade-right 2.2s ease-in-out forwards",
+                        glow: "glow 2.4s ease-in-out forwards",          // اصلاح: فقط یک‌بار
+                        "fade-up": "fade-up 1.8s ease-out forwards",     // اضافه شد
+                    },
+                    keyframes: {
+                        "fade-in": {
+                            "0%": { opacity: "0%" },
+                            "75%": { opacity: "0%" },
+                            "100%": { opacity: "100%" },
+                        },
+                        "fade-left": {
+                            "0%": { transform: "translateX(100%)", opacity: "0%" },
+                            "30%": { transform: "translateX(0%)", opacity: "100%" },
+                            "100%": { opacity: "0%" },
+                        },
+                        "fade-right": {
+                            "0%": { transform: "translateX(-100%)", opacity: "0%" },
+                            "30%": { transform: "translateX(0%)", opacity: "100%" },
+                            "100%": { opacity: "0%" },
+                        },
+                        title: {
+                            "0%": {
+                                lineHeight: "0%",
+                                letterSpacing: "0.25em",
+                                transform: "translateY(12px)",
+                                opacity: "0",
+                            },
+                            "25%": { lineHeight: "0%", opacity: "0%" },
+                            "80%": { opacity: "100%" },
+                            "100%": {
+                                lineHeight: "100%",
+                                letterSpacing: "0em",
+                                transform: "translateY(0)",
+                                opacity: "100%",
+                            },
+                        },
+                        glow: {
+                            "0%": { opacity: "0.0" },
+                            "50%": { opacity: "0.45" },
+                            "100%": { opacity: "0.0" },
+                        },
+                        "fade-up": {
+                            "0%": { transform: "translateY(12px)", opacity: "0%" },
+                            "100%": { transform: "translateY(0)", opacity: "100%" },
+                        },
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        .text-edge-outline {
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+        }
+    </style>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body class="bg-black overflow-x-hidden">
+    <div
+        class="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
+        <nav class="my-16 opacity-0 animate-fade-in [animation-delay:200ms] [animation-fill-mode:both]">
+            <ul class="flex items-center justify-center gap-4">
+                <a href="./projects.html" class="text-sm duration-500 text-zinc-500 hover:text-zinc-300">
+                    Projects
+                </a>
+                <a href="./contact.html" class="text-sm duration-500 text-zinc-500 hover:text-zinc-300">
+                    Contact
+                </a>
+                <a href="./skills.html" class="text-sm duration-500 text-zinc-500 hover:text-zinc-300">
+                    Skills
+                </a>
+                <a href="./about.html" class="text-sm duration-500 text-zinc-500 hover:text-zinc-300">
+                    About
+                </a>
+            </ul>
+        </nav>
+
+        <div
+            class="hidden w-screen h-px opacity-0 animate-glow [animation-delay:450ms] [animation-fill-mode:both] md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0">
+        </div>
+
+        <div id="particles"
+            class="absolute inset-0 -z-10 opacity-0 animate-fade-in [animation-delay:600ms] [animation-fill-mode:both]"
+            aria-hidden="true">
+            <canvas></canvas>
+        </div>
+
+        <h1
+            class="py-3.5 px-0.5 z-10 text-4xl text-transparent duration-1000 bg-white cursor-default text-edge-outline opacity-0 animate-title [animation-delay:800ms] [animation-fill-mode:both] font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text">
+            Abolfazl
+        </h1>
+
+        <div
+            class="hidden w-screen h-px opacity-0 animate-glow [animation-delay:900ms] [animation-fill-mode:both] md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0">
+        </div>
+
+        <div class="my-16 text-center opacity-0 animate-fade-up [animation-delay:1100ms] [animation-fill-mode:both]">
+            <h2 class="text-sm text-zinc-500">
+                Backend Developer | API Design | Laravel | Python | MongoDB
+            </h2>
+        </div>
+    </div>
+
+    <script src="./js/particles.js"></script>
+
+</body>
+
+</html>
