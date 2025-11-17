@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="fa" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Skills</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        display: ["CalSans", "ui-sans-serif", "system-ui"],
+                    },
+                    animation: {
+                        "fade-in": "fade-in 1.6s ease-in-out forwards",
+                        "fade-up": "fade-up 0.9s ease-out forwards",
+                    },
+                    keyframes: {
+                        "fade-in": { "0%": { opacity: "0%" }, "100%": { opacity: "100%" } },
+                        "fade-up": {
+                            "0%": { transform: "translateY(12px)", opacity: "0%" },
+                            "100%": { transform: "translateY(0)", opacity: "100%" },
+                        },
+                    },
+                },
+            },
+        };
+    </script>
+
+
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body class="bg-black">
+    <div class="relative min-h-screen bg-gradient-to-tl from-black via-zinc-900 to-black">
+        <!-- Header -->
+        <header class="fixed inset-x-0 top-0 z-50 backdrop-blur border-b border-zinc-800/30">
+            <div class="container mx-auto flex items-center justify-between p-6">
+                <a href="./index.html" class="text-zinc-300 hover:text-white duration-200">← Home</a>
+                <nav class="flex gap-8">
+                    <a href="./projects.html" class="text-zinc-400 hover:text-zinc-100 duration-200">Projects</a>
+                    <a href="./contact.html" class="text-zinc-400 hover:text-zinc-100 duration-200">Contact</a>
+                    <span class="text-zinc-200">Skills</span>
+                    <a href="./about.html" class="text-zinc-400 hover:text-zinc-100 duration-200">About</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Content -->
+        <main class="px-6 pt-24 mx-auto space-y-8 max-w-7xl lg:px-8 md:space-y-16 md:pt-28 lg:pt-36">
+            <div class="max-w-2xl mx-auto lg:mx-0 opacity-0 animate-fade-up [animation-fill-mode:both]">
+                <h2 class="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl font-display">Skills</h2>
+                <p class="mt-4 text-zinc-400">
+                    Key technologies and tools I use regularly.
+                </p>
+            </div>
+
+            <div
+                class="w-full h-px bg-zinc-800 opacity-0 animate-fade-in [animation-delay:150ms] [animation-fill-mode:both]">
+            </div>
+
+            <!-- Grid of skills -->
+            <section
+                class="grid grid-cols-1 gap-8 lg:grid-cols-2 opacity-0 animate-fade-in [animation-delay:300ms] [animation-fill-mode:both]">
+                <article
+                    class="p-6 border rounded-xl border-zinc-700/70 hover:border-zinc-500/70 duration-300 hover:bg-zinc-800/10">
+                    <h3 class="text-xl font-bold text-zinc-100 font-display">Languages & Frameworks</h3>
+                    <ul class="mt-4 text-zinc-300 leading-7">
+                        <li>PHP</li>
+                        <li>Laravel</li>
+                        <li>JavaScript (Basic)</li>
+                        <li>Tailwind</li>
+                        <li>CSS</li>
+                        <li>Bootstrap</li>
+                        <li>HTML</li>
+                        <li>css</li>
+                        <li>Python</li>
+                        <li>NextJs (Basic)</li>
+                        <li>Nuxt (Basic)</li>
+                    </ul>
+                </article>
+                <article
+                    class="p-6 border rounded-xl border-zinc-700/70 hover:border-zinc-500/70 duration-300 hover:bg-zinc-800/10">
+                    <h3 class="text-xl font-bold text-zinc-100 font-display">Databases</h3>
+                    <ul class="mt-4 text-zinc-300 leading-7">
+                        <li>MySQL (Intermediate)</li>
+                        <li>MongoDB</li>
+                        <li>Redis (basic)</li>
+                    </ul>
+                </article>
+
+                <article
+                    class="p-6 border rounded-xl border-zinc-700/70 hover:border-zinc-500/70 duration-300 hover:bg-zinc-800/10">
+                    <h3 class="text-xl font-bold text-zinc-100 font-display">Concepts & Design</h3>
+                    <ul class="mt-4 text-zinc-300 leading-7">
+                        <li>Object-Oriented Programming (OOP)</li>
+                        <li>Design Patterns</li>
+                        <li>MVC Architecture</li>
+                        <li>RESTful API</li>
+                        <li>Caching in Laravel</li>
+                    </ul>
+                </article>
+
+                <article
+                    class="p-6 border rounded-xl border-zinc-700/70 hover:border-zinc-500/70 duration-300 hover:bg-zinc-800/10">
+                    <h3 class="text-xl font-bold text-zinc-100 font-display">Infrastructure & Tools</h3>
+                    <ul class="mt-4 text-zinc-300 leading-7">
+                        <li>Git</li>
+                        <li>Redis</li>
+                        <li>MinIO</li>
+                        <li>Docker (Basic)</li>
+                        <li>Linux (Basic)</li>
+                        <li>Kubernetes/kubectl (Basic – migrated site from OpenLiteSpeed to Kubernetes)</li>
+                    </ul>
+                </article>
+            </section>
+
+            <div
+                class="hidden w-full h-px md:block bg-zinc-800 opacity-0 animate-fade-in [animation-delay:450ms] [animation-fill-mode:both]">
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
